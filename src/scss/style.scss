@@ -1,0 +1,79 @@
+$dark-color: #262a41;
+$text-color: grey;
+
+.App {
+    background-color: $dark-color;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container 
+{
+  display: flex;
+
+  .dashboard {
+    max-width: 50%;
+    margin: 100px auto;
+    align-items: center;
+    color: $text-color;
+
+    button {
+      width: 90px;
+      height: 90px;
+      border-radius: 28px;
+      margin-left: 30px;
+      color: #fff;
+    }
+
+    i{
+        font-size: 50px;
+    }
+  }
+  .side-dash {
+    border: 1px solid grey;
+    background-color: #f7f7ff;
+    width: 50%;
+    margin: 10px 10px;
+    border-radius: 10px;
+
+    h2{
+      padding-left:60px;
+    }
+  }
+}
+
+.user-div{
+  display: flex;
+  background-color: #fff;
+  justify-content: space-evenly;
+  margin: 10px 60px;
+  border-radius: 10px;
+
+  img{
+    border-radius: 50%;
+    border: 3px solid #7946C1;
+  }
+  .user-dp {
+    margin-top: 5%;
+    padding: 0 20px;
+  }
+  .emailphone {
+    display: flex;
+    padding-right: 20px;
+  }
+  .user-arrow{
+    margin-top: 75px;
+    padding-right: 10px;
+  }
+
+}
+.loading{
+  text-align: center;
+}
