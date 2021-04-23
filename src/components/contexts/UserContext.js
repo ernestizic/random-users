@@ -8,22 +8,42 @@ const UserContextProvider = (props) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const fetchUser =()=> {
-            axios.get('https://randomuser.me/api/?results=5')
-                .then(res => {
-                    console.log(res.data.results)
-                    setUsers(res.data.results);
-                    setIsLoading(false)
-                })
-                .catch(error => {
-                    console.log(error);
-                    setIsLoading(true);
-                });
+        const fetchUsers = async ()=> {
+            const res = await axios.get('https://randomuser.me/api/')
+                //console.log(res.data.results)
+                setUsers(res.data.results);
+                setIsLoading(false)
         }
-        fetchUser();
+        fetchUsers();
     }, [])
+
+    useEffect(() => {
+        fetchMaleUsers();
+        return () => {
+            
+        }
+    }, [])
+
+
+    //Male users
+    const fetchMaleUsers =()=> {
+        axios.get('https://randomuser.me/api/?gender=male')
+            .then(res =>{
+                //console.log(res.data) 
+                setIsLoading(true);
+                setUsers(res.data.results);
+                setIsLoading(false);
+                } 
+            )
+            .catch(error => {
+                console.log(error);
+                setIsLoading(true);
+            });
+    };
+
+
     return ( 
-        <UserContext.Provider value={{users, isLoading}}>
+        <UserContext.Provider value={{users, isLoading, fetchMaleUsers}}>
             {props.children}
         </UserContext.Provider>
      );

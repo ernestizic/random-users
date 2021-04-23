@@ -12,7 +12,7 @@ const UsersList = () => {
         </div>
     ) : (
         users.map(user => (
-            <User user={user}/>
+            <User key={user.login.uuid} user={user}/>
         ))
     )
     return ( 

@@ -28,6 +28,15 @@ body {
   color: #fff;
 }
 
+.container .dashboard button:hover {
+  cursor: pointer;
+}
+
+.container .dashboard button:active {
+  width: 95px;
+  height: 95px;
+}
+
 .container .dashboard i {
   font-size: 50px;
 }
@@ -54,7 +63,7 @@ body {
 
 .user-div img {
   border-radius: 50%;
-  border: 3px solid #7946C1;
+  border: 5px solid #30BBB5;
 }
 
 .user-div .user-dp {
@@ -64,7 +73,6 @@ body {
 
 .user-div .emailphone {
   display: flex;
-  padding-right: 20px;
 }
 
 .user-div .user-arrow {
