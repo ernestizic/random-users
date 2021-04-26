@@ -3,7 +3,6 @@ import {UserContext} from '../contexts/UserContext';
 import User from './User';
 
 const UsersList = () => {
-
     const {users, isLoading} = useContext(UserContext)
 
     let allUsers = isLoading ? (

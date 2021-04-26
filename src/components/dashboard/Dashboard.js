@@ -10,11 +10,11 @@ const Dashboard = () => {
         <div className="container">
             <UserContextProvider>
                 <FirstDash />
-            </UserContextProvider>
             
             <div className="side-dash">
                 <SideDash />
             </div>
+            </UserContextProvider>
         </div>
      );
 }
