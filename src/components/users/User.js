@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 //import {Link} from 'react-router-dom';
 import { UserContext } from '../contexts/UserContext';
+import { FaArrowRight } from 'react-icons/fa';
 
 const User = ({user}) => {
     const {userDetail} = useContext(UserContext);
@@ -19,7 +20,7 @@ const User = ({user}) => {
             </div>
             <div className='user-arrow'>
                 {/*<Link to={`/user/${user.cell}`}><i className='fas fa-angle-right'></i></Link> */}
-                <button onClick={()=> userDetail(user.cell)}><i className='fas fa-angle-right'></i></button>
+                <button onClick={()=> userDetail(user.cell)}><FaArrowRight /></button>
             </div>
         </div>
      );

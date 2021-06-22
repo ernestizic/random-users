@@ -1,6 +1,7 @@
 import React, {useContext} from 'react';
 import {UserContext} from '../contexts/UserContext';
 import User from './User';
+import { FaArrowLeft } from 'react-icons/fa';
 
 const UsersList = () => {
     const {clonedUsers, isLoading, back} = useContext(UserContext)
@@ -21,7 +22,7 @@ const UsersList = () => {
 
     let oneUser = clonedUsers.map(user => (
         <>
-        <p style={{marginLeft: '60px', cursor: 'pointer'}} onClick={back}><i className="fas fa-arrow-left" style={{color: '#30BBB5'}}></i> RESULTS</p>
+        <p style={{marginLeft: '60px', cursor: 'pointer'}} onClick={back}> <FaArrowLeft style={{color: '#30BBB5'}}/> RESULTS</p>
         <div className='user-detail' key={user.login.uuid}>
             <div className='user-dp'>
                 <img src={user.picture.large} alt='user-img'/>
@@ -38,7 +39,7 @@ const UsersList = () => {
         </div>
         </>
     ))
-
+    
     const show = clonedUsers.length === 1 ? (oneUser) : (allUsers)
 
     return ( 

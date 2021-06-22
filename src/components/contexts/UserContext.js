@@ -8,7 +8,14 @@ const UserContextProvider = (props) => {
     const [clonedUsers, setClonedUsers] = useState([])
     const [isLoading, setIsLoading] = useState(false);
     const [gender, setGender] = useState('All Users');
+    //const [currentPage, setCurrentPage] = useState(1)
+    //const [usersPerPage, setUsersPerPage] = useState(3)
 
+
+    //Get current users
+    //const indexOfLastUser = currentPage * usersPerPage;
+    //const indexOfFirstUser = indexOfLastUser - usersPerPage;
+    //const currentUsers = users.slice(indexOfFirstUser, indexOfLastUser)
 
     useEffect(() => {
         fetchUsers();
@@ -48,7 +55,17 @@ const UserContextProvider = (props) => {
         setIsLoading(false)
     } 
     */
-
+    
+    /******** a test by my Oga, Nonso.js ********/
+    /*
+    const fetchUsers = async (gender) => {
+        setIsLoading(true);
+        const url = `https://randomuser.me/api/${gender ?  `?gender=${gender}`: ""}`;
+        const res = await axios.get(url);
+        setUsers(res.data.results);
+        setIsLoading(false);
+      };
+      */
      const getQuery =(q)=> {
         setClonedUsers(users.filter(user => user.name.first.toLowerCase().includes(q.toLowerCase())))
      }
@@ -56,24 +73,28 @@ const UserContextProvider = (props) => {
     //all users
     const allUsers =()=> {
         setClonedUsers(users);
+        //setClonedUsers( currentUsers );
         setGender('All Users');
     };
 
     //male users
     const maleUsers =()=> {
         setClonedUsers(users.filter(user => user.gender === 'male'));
+        //setClonedUsers(currentUsers.filter(user => user.gender === 'male'));
         setGender('Male Users');
     };
 
     //female users
     const femaleUsers =()=> {
         setClonedUsers(users.filter(user => user.gender === 'female'));
+        //setClonedUsers(currentUsers.filter(user => user.gender === 'female'));
         setGender('Female Users');
     };
 
     
     const userDetail =(cell)=> {
         setClonedUsers(users.filter(user => user.cell === cell ))
+        //setClonedUsers(currentUsers.filter(user => user.cell === cell ))
         setGender("User List")
     }
 
