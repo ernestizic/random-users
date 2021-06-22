@@ -20,6 +20,14 @@ body {
   color: grey;
 }
 
+.container .dashboard .show-users {
+  display: flex;
+}
+
+.container .dashboard .show-users p {
+  padding-left: 45px;
+}
+
 .container .dashboard button {
   width: 90px;
   height: 90px;
@@ -77,10 +85,38 @@ body {
 
 .user-div .user-arrow {
   margin-top: 75px;
-  padding-right: 10px;
+  padding: 10px;
+  border: 1px solid black;
 }
 
 .loading {
   text-align: center;
+}
+
+.user-detail {
+  display: flex;
+  margin: 10px 60px;
+  border-radius: 10px;
+}
+
+.user-detail img {
+  border-radius: 50%;
+  border: 5px solid #30BBB5;
+}
+
+.user-detail .user-details {
+  padding-left: 25px;
+}
+
+.user-detail .mail {
+  background-color: #0000000D;
+  border-radius: 20px;
+  padding: 6px;
+}
+
+.user-detail .joined {
+  background-color: #dfb9d0;
+  border-radius: 20px;
+  padding: 6px;
 }
 /*# sourceMappingURL=style.css.map */

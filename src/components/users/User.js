@@ -1,7 +1,9 @@
-import React from 'react';
-import {Link} from 'react-router-dom';
+import React, { useContext } from 'react';
+//import {Link} from 'react-router-dom';
+import { UserContext } from '../contexts/UserContext';
 
 const User = ({user}) => {
+    const {userDetail} = useContext(UserContext);
     return ( 
         <div className='user-div'>
             <div className='user-dp'>
@@ -16,7 +18,8 @@ const User = ({user}) => {
                 </div>
             </div>
             <div className='user-arrow'>
-                <Link to={`/user/${user.login.uuid}`}><i className='fas fa-angle-right'></i></Link>
+                {/*<Link to={`/user/${user.cell}`}><i className='fas fa-angle-right'></i></Link> */}
+                <button onClick={()=> userDetail(user.cell)}><i className='fas fa-angle-right'></i></button>
             </div>
         </div>
      );

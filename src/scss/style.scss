@@ -24,6 +24,13 @@ body {
     align-items: center;
     color: $text-color;
 
+    .show-users{
+      display: flex;
+      p{
+        padding-left: 45px;
+      }
+    }
+
     button {
       width: 90px;
       height: 90px;
@@ -76,10 +83,35 @@ body {
   }
   .user-arrow{
     margin-top: 75px;
-    padding-right: 10px;
+    padding: 10px;
+    border: 1px solid black;
   }
 
 }
 .loading{
   text-align: center;
+}
+
+.user-detail {
+  display: flex;
+  margin: 10px 60px;
+  border-radius: 10px;
+
+  img{
+    border-radius: 50%;
+    border: 5px solid #30BBB5;
+  }
+  .user-details {
+    padding-left: 25px;
+  }
+  .mail{
+    background-color: #0000000D;
+    border-radius: 20px;
+    padding: 6px;
+  }
+  .joined {
+    background-color: #dfb9d0;
+    border-radius: 20px;
+    padding: 6px;
+  }
 }
