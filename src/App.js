@@ -1,6 +1,6 @@
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Dashboard from "./components/dashboard/Dashboard";
 import UserDetails from './components/users/UserDetails';
+import AllUsers from './components/users/AllUsers';
 import UserContextProvider from './components/contexts/UserContext';
 
 
@@ -11,7 +11,7 @@ function App() {
         <div className="App">
           <Switch>
             <Route exact path="/">
-              <Dashboard />
+              <AllUsers />
             </Route> 
             <Route path="/user/:user_id" component={UserDetails}/>
           </Switch>

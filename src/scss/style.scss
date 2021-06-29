@@ -2,7 +2,7 @@ $dark-color: #262a41;
 $text-color: grey;
 
 .App {
-    background-color: $dark-color;
+  background-color: $dark-color;
 }
 
 body {
@@ -14,19 +14,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.container 
-{
+.container {
   display: flex;
 
   .dashboard {
-    max-width: 50%;
     margin: 100px auto;
-    align-items: center;
     color: $text-color;
 
-    .show-users{
+    .show-users {
       display: flex;
-      p{
+      p {
         padding-left: 45px;
       }
     }
@@ -37,17 +34,13 @@ body {
       border-radius: 28px;
       margin-left: 30px;
       color: #fff;
-      &:hover{
+      &:hover {
         cursor: pointer;
       }
-      &:active{
+      &:active {
         width: 95px;
         height: 95px;
       }
-    }
-
-    i{
-        font-size: 50px;
     }
   }
   .side-dash {
@@ -57,22 +50,22 @@ body {
     margin: 10px 10px;
     border-radius: 10px;
 
-    h2{
-      padding-left:60px;
+    .all-users .heading {
+      padding-left: 60px;
     }
   }
 }
 
-.user-div{
+.user-div {
   display: flex;
   background-color: #fff;
   justify-content: space-evenly;
   margin: 10px 60px;
   border-radius: 10px;
 
-  img{
+  img {
     border-radius: 50%;
-    border: 5px solid #30BBB5;
+    border: 5px solid #30bbb5;
   }
   .user-dp {
     margin-top: 5%;
@@ -80,14 +73,22 @@ body {
   }
   .emailphone {
     display: flex;
+    .ph {
+      padding: 0 20px;
+    }
   }
-  .user-arrow{
+  .user-arrow {
     margin-top: 75px;
+    margin-bottom: 15px;
+    border-radius: 10px;
     padding: 10px;
+    background-color: #30bbb5;
+    a{
+      color: #fff;
+    }
   }
-
 }
-.loading{
+.loading {
   text-align: center;
 }
 
@@ -96,15 +97,15 @@ body {
   margin: 10px 60px;
   border-radius: 10px;
 
-  img{
+  img {
     border-radius: 50%;
-    border: 5px solid #30BBB5;
+    border: 5px solid #30bbb5;
   }
   .user-details {
     padding-left: 25px;
   }
-  .mail{
-    background-color: #0000000D;
+  .mail {
+    background-color: #0000000d;
     border-radius: 20px;
     padding: 6px;
   }
@@ -112,5 +113,92 @@ body {
     background-color: #dfb9d0;
     border-radius: 20px;
     padding: 6px;
+  }
+}
+
+.download-div {
+  margin: 30px 60px;
+  button {
+    padding: 12px 15px;
+    border-radius: 20px;
+    background-color: #7946c1;
+    color: #fff;
+    border: none;
+  }
+}
+
+@media only screen and (max-width: 414px) {
+  .container {
+    flex-direction: column;
+
+    .dashboard {
+      max-width: 80%;
+      button {
+        width: 10px;
+        height: 10px;
+        border-radius: 28px;
+        &:active {
+          width: 12px;
+          height: 12px;
+        }
+      }
+    }
+
+    .side-dash {
+      width: 97%;
+      margin: 2px auto;
+      .all-users .heading {
+        padding-left: 40px;
+      }
+    }
+  }
+
+  .user-div {
+    flex-direction: column;
+    margin: 10px 30px;
+    .user-dp {
+      margin-top: 5%;
+      padding: 0 20px;
+    }
+    .emailphone {
+      flex-direction: column;
+      .ph {
+        padding: 0;
+        margin: 0;
+      }
+    }
+    .user-arrow {
+      margin: 15px 20px;
+      padding: 5px 20px;
+      background-color: #30bbb5;
+      color: white;
+      width: 21px;
+    }
+    .user-details {
+      padding: 0 20px;
+    }
+  }
+
+  .user-detail {
+    flex-direction: column;
+    margin: 10px 60px;
+
+    img {
+      border-radius: 50%;
+      border: 5px solid #30bbb5;
+    }
+    .user-details {
+      padding-left: 0;
+    }
+    .mail {
+      background-color: #0000000d;
+      border-radius: 20px;
+      padding: 6px;
+    }
+    .joined {
+      background-color: #dfb9d0;
+      border-radius: 20px;
+      padding: 6px;
+    }
   }
 }

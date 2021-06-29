@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
-//import {Link} from 'react-router-dom';
-import { UserContext } from '../contexts/UserContext';
+import React from 'react';
+import {Link} from 'react-router-dom';
 import { FaArrowRight } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
+import { FiPhoneCall } from 'react-icons/fi';
 
 const User = ({user}) => {
-    const {userDetail} = useContext(UserContext);
+
     return ( 
         <div className='user-div'>
             <div className='user-dp'>
@@ -14,13 +15,13 @@ const User = ({user}) => {
                 <h4 style={{marginTop:'0'}}>{user.name.title} {user.name.first} {user.name.last}</h4>
                 <address>{user.location.street.number} {user.location.street.name} {user.location.state}</address>
                 <div className='emailphone'>   
-                    <p><i className='fas fa-envelope-square'></i> {user.email}</p>
-                    <p style={{padding: '0 20px'}}> <i className='fas fa-phone-volume'></i> {user.phone}</p>
+                    <p><AiOutlineMail /> {user.email}</p>
+                    <p className='ph'> <FiPhoneCall /> {user.phone}</p>
                 </div>
             </div>
             <div className='user-arrow'>
-                {/*<Link to={`/user/${user.cell}`}><i className='fas fa-angle-right'></i></Link> */}
-                <button onClick={()=> userDetail(user.cell)}><FaArrowRight /></button>
+                <Link to={`/user/${user.cell}`}><FaArrowRight /></Link>
+                {/*<button onClick={()=> userDetail(user.cell)}><FaArrowRight /></button>*/}
             </div>
         </div>
      );

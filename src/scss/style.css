@@ -14,9 +14,7 @@ body {
 }
 
 .container .dashboard {
-  max-width: 50%;
   margin: 100px auto;
-  align-items: center;
   color: grey;
 }
 
@@ -45,10 +43,6 @@ body {
   height: 95px;
 }
 
-.container .dashboard i {
-  font-size: 50px;
-}
-
 .container .side-dash {
   border: 1px solid grey;
   background-color: #f7f7ff;
@@ -57,7 +51,7 @@ body {
   border-radius: 10px;
 }
 
-.container .side-dash h2 {
+.container .side-dash .all-users .heading {
   padding-left: 60px;
 }
 
@@ -71,7 +65,7 @@ body {
 
 .user-div img {
   border-radius: 50%;
-  border: 5px solid #30BBB5;
+  border: 5px solid #30bbb5;
 }
 
 .user-div .user-dp {
@@ -83,9 +77,20 @@ body {
   display: flex;
 }
 
+.user-div .emailphone .ph {
+  padding: 0 20px;
+}
+
 .user-div .user-arrow {
   margin-top: 75px;
+  margin-bottom: 15px;
+  border-radius: 10px;
   padding: 10px;
+  background-color: #30bbb5;
+}
+
+.user-div .user-arrow a {
+  color: #fff;
 }
 
 .loading {
@@ -100,7 +105,7 @@ body {
 
 .user-detail img {
   border-radius: 50%;
-  border: 5px solid #30BBB5;
+  border: 5px solid #30bbb5;
 }
 
 .user-detail .user-details {
@@ -108,7 +113,7 @@ body {
 }
 
 .user-detail .mail {
-  background-color: #0000000D;
+  background-color: #0000000d;
   border-radius: 20px;
   padding: 6px;
 }
@@ -117,5 +122,88 @@ body {
   background-color: #dfb9d0;
   border-radius: 20px;
   padding: 6px;
+}
+
+.download-div {
+  margin: 30px 60px;
+}
+
+.download-div button {
+  padding: 12px 15px;
+  border-radius: 20px;
+  background-color: #7946c1;
+  color: #fff;
+  border: none;
+}
+
+@media only screen and (max-width: 414px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .dashboard {
+    max-width: 80%;
+  }
+  .container .dashboard button {
+    width: 10px;
+    height: 10px;
+    border-radius: 28px;
+  }
+  .container .dashboard button:active {
+    width: 12px;
+    height: 12px;
+  }
+  .container .side-dash {
+    width: 97%;
+    margin: 2px auto;
+  }
+  .container .side-dash .all-users .heading {
+    padding-left: 40px;
+  }
+  .user-div {
+    flex-direction: column;
+    margin: 10px 30px;
+  }
+  .user-div .user-dp {
+    margin-top: 5%;
+    padding: 0 20px;
+  }
+  .user-div .emailphone {
+    flex-direction: column;
+  }
+  .user-div .emailphone .ph {
+    padding: 0;
+    margin: 0;
+  }
+  .user-div .user-arrow {
+    margin: 15px 20px;
+    padding: 5px 20px;
+    background-color: #30bbb5;
+    color: white;
+    width: 21px;
+  }
+  .user-div .user-details {
+    padding: 0 20px;
+  }
+  .user-detail {
+    flex-direction: column;
+    margin: 10px 60px;
+  }
+  .user-detail img {
+    border-radius: 50%;
+    border: 5px solid #30bbb5;
+  }
+  .user-detail .user-details {
+    padding-left: 0;
+  }
+  .user-detail .mail {
+    background-color: #0000000d;
+    border-radius: 20px;
+    padding: 6px;
+  }
+  .user-detail .joined {
+    background-color: #dfb9d0;
+    border-radius: 20px;
+    padding: 6px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
