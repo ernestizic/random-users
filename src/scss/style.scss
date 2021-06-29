@@ -83,7 +83,7 @@ body {
     border-radius: 10px;
     padding: 10px;
     background-color: #30bbb5;
-    a{
+    a {
       color: #fff;
     }
   }
@@ -118,7 +118,28 @@ body {
 
 .download-div {
   margin: 30px 60px;
-  button {
+  display: flex;
+  justify-content: space-between;
+  .pagination {
+    button {
+      border-radius: 10px;
+      color: #fff;
+      padding: 10px 14px;
+      border: none;
+    }
+    .fir {
+      background-color: gray;
+      color: black;
+      cursor: pointer;
+    }
+    .sec {
+      background-color: black;
+      margin-left: 10px;
+      color: #fff;
+      cursor: pointer;
+    }
+  }
+  .download-btn {
     padding: 12px 15px;
     border-radius: 20px;
     background-color: #7946c1;
@@ -199,6 +220,13 @@ body {
       background-color: #dfb9d0;
       border-radius: 20px;
       padding: 6px;
+    }
+  }
+  .download-div {
+    flex-direction: column;
+    .pagination {
+      padding-top: 20px;
+      text-align: center;
     }
   }
 }

@@ -126,9 +126,31 @@ body {
 
 .download-div {
   margin: 30px 60px;
+  display: flex;
+  justify-content: space-between;
 }
 
-.download-div button {
+.download-div .pagination button {
+  border-radius: 10px;
+  color: #fff;
+  padding: 10px 14px;
+  border: none;
+}
+
+.download-div .pagination .fir {
+  background-color: gray;
+  color: black;
+  cursor: pointer;
+}
+
+.download-div .pagination .sec {
+  background-color: black;
+  margin-left: 10px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.download-div .download-btn {
   padding: 12px 15px;
   border-radius: 20px;
   background-color: #7946c1;
@@ -204,6 +226,13 @@ body {
     background-color: #dfb9d0;
     border-radius: 20px;
     padding: 6px;
+  }
+  .download-div {
+    flex-direction: column;
+  }
+  .download-div .pagination {
+    padding-top: 20px;
+    text-align: center;
   }
 }
 /*# sourceMappingURL=style.css.map */
