@@ -1,7 +1,7 @@
 import React, {useContext} from 'react';
 import SearchUser from '../ui/SearchUser';
 import { FaUsers, FaMale, FaFemale } from 'react-icons/fa';
-import propTypes from 'prop-types';
+//import propTypes from 'prop-types';
 import { UserContext } from '../contexts/UserContext';
 
 
@@ -40,9 +40,9 @@ const Dashboard = ({children}) => {
         </div>
      );
 }
-
+/*
 Dashboard.propTypes = {
     children: propTypes.arrayOf(propTypes.element).isRequired
-}
+}*/
  
 export default Dashboard;

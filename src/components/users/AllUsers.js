@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import { UserContext } from '../contexts/UserContext';
 import UsersList from '../users/UsersList';
 import Dashboard from '../dashboard/Dashboard.js'
+import FindUser from '../ui/FindUser';
 
 const AllUsers = () => {
     const {gender} = useContext(UserContext)
@@ -12,7 +13,7 @@ const AllUsers = () => {
                     <h2>{gender}</h2>
                     <p>Filter by</p>
                     <div className='filterby'>
-                        <input type='search' placeholder='Find in list' style={{padding: '7px', borderRadius: '12px'}}/>
+                        <FindUser />
                     </div>
                 </div>  
                 <UsersList />

@@ -38,7 +38,31 @@ const UserContextProvider = (props) => {
         };
     }
 
-
+    /*
+    const fetchUsers = async (gender)=> {
+        let URL;
+        if (gender) {
+            URL = `https://randomuser.me/api/?page=3&gender=${gender}&results=100&seed=foobar`
+        } else {
+            URL = 'https://randomuser.me/api/?page=3&results=100&seed=foobar'
+        }
+        setIsLoading(true)
+        const res = await axios.get(URL)
+        //console.log(res.data.results)
+        setUsers(res.data.results);
+        setIsLoading(false)
+    } */
+    
+    /******** a test by my Oga, Nonso.js ********/
+    /*
+    const fetchUsers = async (gender) => {
+        setIsLoading(true);
+        const url = `https://randomuser.me/api/${gender ?  `?gender=${gender}`: ""}`;
+        const res = await axios.get(url);
+        setUsers(res.data.results);
+        setIsLoading(false);
+      };
+      */
      const getQuery =(q)=> {
         setClonedUsers(users.filter(user => user.name.first.toLowerCase().includes(q.toLowerCase())))
      }
